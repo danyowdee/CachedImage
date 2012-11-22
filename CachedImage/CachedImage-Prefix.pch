@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'CachedImage' target in the 'CachedImage' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif
