@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		74BEC26D165ED4120007763D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BEC26C165ED4120007763D /* Foundation.framework */; };
-		74BEC272165ED4120007763D /* CachedImage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74BEC271165ED4120007763D /* CachedImage.h */; };
-		74BEC274165ED4120007763D /* CachedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BEC273165ED4120007763D /* CachedImage.m */; };
+		74BEC27D165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BEC27C165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.m */; };
+		74BEC285165EE4FD0007763D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BEC284165EE4FD0007763D /* SenTestingKit.framework */; };
+		74BEC287165EE4FD0007763D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BEC286165EE4FD0007763D /* UIKit.framework */; };
+		74BEC298165EE9B40007763D /* UIImage+D12_SecondaryBundleCacheSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BEC27C165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,7 +21,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				74BEC272165ED4120007763D /* CachedImage.h in CopyFiles */,
+				74ED324016611045002F3B2D /* UIImage+D12_SecondaryBundleCacheSupport.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -29,8 +31,10 @@
 		74BEC269165ED4120007763D /* libCachedImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCachedImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BEC26C165ED4120007763D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74BEC270165ED4120007763D /* CachedImage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CachedImage-Prefix.pch"; sourceTree = "<group>"; };
-		74BEC271165ED4120007763D /* CachedImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CachedImage.h; sourceTree = "<group>"; };
-		74BEC273165ED4120007763D /* CachedImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CachedImage.m; sourceTree = "<group>"; };
+		74BEC27B165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+D12_SecondaryBundleCacheSupport.h"; sourceTree = "<group>"; };
+		74BEC27C165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+D12_SecondaryBundleCacheSupport.m"; sourceTree = "<group>"; };
+		74BEC284165EE4FD0007763D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74BEC286165EE4FD0007763D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				74BEC26C165ED4120007763D /* Foundation.framework */,
+				74BEC284165EE4FD0007763D /* SenTestingKit.framework */,
+				74BEC286165EE4FD0007763D /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,8 +79,7 @@
 		74BEC26E165ED4120007763D /* CachedImage */ = {
 			isa = PBXGroup;
 			children = (
-				74BEC271165ED4120007763D /* CachedImage.h */,
-				74BEC273165ED4120007763D /* CachedImage.m */,
+				74BEC27A165ED44F0007763D /* Source */,
 				74BEC26F165ED4120007763D /* Supporting Files */,
 			);
 			path = CachedImage;
@@ -86,6 +91,15 @@
 				74BEC270165ED4120007763D /* CachedImage-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74BEC27A165ED44F0007763D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				74BEC27B165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.h */,
+				74BEC27C165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +128,7 @@
 		74BEC260165ED4120007763D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = D12;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Daniel Demiss";
 			};
@@ -139,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74BEC274165ED4120007763D /* CachedImage.m in Sources */,
+				74BEC27D165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
