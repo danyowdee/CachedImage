@@ -11,7 +11,12 @@
 		74BEC27D165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BEC27C165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.m */; };
 		74BEC285165EE4FD0007763D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BEC284165EE4FD0007763D /* SenTestingKit.framework */; };
 		74BEC287165EE4FD0007763D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BEC286165EE4FD0007763D /* UIKit.framework */; };
+		74BEC288165EE4FD0007763D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BEC26C165ED4120007763D /* Foundation.framework */; };
+		74BEC28E165EE4FD0007763D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BEC28C165EE4FD0007763D /* InfoPlist.strings */; };
+		74BEC291165EE4FD0007763D /* Cacheing_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BEC290165EE4FD0007763D /* Cacheing_Tests.m */; };
+		74BEC297165EE5B60007763D /* Font Book.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 74BEC296165EE5B60007763D /* Font Book.tiff */; };
 		74BEC298165EE9B40007763D /* UIImage+D12_SecondaryBundleCacheSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BEC27C165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.m */; };
+		74ED324016611045002F3B2D /* UIImage+D12_SecondaryBundleCacheSupport.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74BEC27B165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,8 +38,15 @@
 		74BEC270165ED4120007763D /* CachedImage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CachedImage-Prefix.pch"; sourceTree = "<group>"; };
 		74BEC27B165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+D12_SecondaryBundleCacheSupport.h"; sourceTree = "<group>"; };
 		74BEC27C165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+D12_SecondaryBundleCacheSupport.m"; sourceTree = "<group>"; };
+		74BEC283165EE4FD0007763D /* Cacheing Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cacheing Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BEC284165EE4FD0007763D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		74BEC286165EE4FD0007763D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		74BEC28B165EE4FD0007763D /* Cacheing Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cacheing Tests-Info.plist"; sourceTree = "<group>"; };
+		74BEC28D165EE4FD0007763D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74BEC28F165EE4FD0007763D /* Cacheing_Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cacheing_Tests.h; sourceTree = "<group>"; };
+		74BEC290165EE4FD0007763D /* Cacheing_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cacheing_Tests.m; sourceTree = "<group>"; };
+		74BEC292165EE4FD0007763D /* Cacheing Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cacheing Tests-Prefix.pch"; sourceTree = "<group>"; };
+		74BEC296165EE5B60007763D /* Font Book.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Font Book.tiff"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +58,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74BEC27F165EE4FD0007763D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74BEC285165EE4FD0007763D /* SenTestingKit.framework in Frameworks */,
+				74BEC287165EE4FD0007763D /* UIKit.framework in Frameworks */,
+				74BEC288165EE4FD0007763D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -53,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				74BEC26E165ED4120007763D /* CachedImage */,
+				74BEC289165EE4FD0007763D /* Cacheing Tests */,
 				74BEC26B165ED4120007763D /* Frameworks */,
 				74BEC26A165ED4120007763D /* Products */,
 			);
@@ -62,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				74BEC269165ED4120007763D /* libCachedImage.a */,
+				74BEC283165EE4FD0007763D /* Cacheing Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +126,27 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		74BEC289165EE4FD0007763D /* Cacheing Tests */ = {
+			isa = PBXGroup;
+			children = (
+				74BEC28F165EE4FD0007763D /* Cacheing_Tests.h */,
+				74BEC290165EE4FD0007763D /* Cacheing_Tests.m */,
+				74BEC28A165EE4FD0007763D /* Supporting Files */,
+			);
+			path = "Cacheing Tests";
+			sourceTree = "<group>";
+		};
+		74BEC28A165EE4FD0007763D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74BEC296165EE5B60007763D /* Font Book.tiff */,
+				74BEC28B165EE4FD0007763D /* Cacheing Tests-Info.plist */,
+				74BEC28C165EE4FD0007763D /* InfoPlist.strings */,
+				74BEC292165EE4FD0007763D /* Cacheing Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,6 +166,24 @@
 			productName = CachedImage;
 			productReference = 74BEC269165ED4120007763D /* libCachedImage.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		74BEC282165EE4FD0007763D /* Cacheing Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74BEC293165EE4FD0007763D /* Build configuration list for PBXNativeTarget "Cacheing Tests" */;
+			buildPhases = (
+				74BEC27E165EE4FD0007763D /* Sources */,
+				74BEC27F165EE4FD0007763D /* Frameworks */,
+				74BEC280165EE4FD0007763D /* Resources */,
+				74BEC281165EE4FD0007763D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cacheing Tests";
+			productName = "Cacheing Tests";
+			productReference = 74BEC283165EE4FD0007763D /* Cacheing Tests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -145,9 +208,38 @@
 			projectRoot = "";
 			targets = (
 				74BEC268165ED4120007763D /* CachedImage */,
+				74BEC282165EE4FD0007763D /* Cacheing Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74BEC280165EE4FD0007763D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74BEC28E165EE4FD0007763D /* InfoPlist.strings in Resources */,
+				74BEC297165EE5B60007763D /* Font Book.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74BEC281165EE4FD0007763D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		74BEC265165ED4120007763D /* Sources */ = {
@@ -158,10 +250,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74BEC27E165EE4FD0007763D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74BEC291165EE4FD0007763D /* Cacheing_Tests.m in Sources */,
+				74BEC298165EE9B40007763D /* UIImage+D12_SecondaryBundleCacheSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		74BEC28C165EE4FD0007763D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74BEC28D165EE4FD0007763D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		74BEC275165ED4120007763D /* Debug */ = {
@@ -233,6 +342,36 @@
 			};
 			name = Release;
 		};
+		74BEC294165EE4FD0007763D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cacheing Tests/Cacheing Tests-Prefix.pch";
+				INFOPLIST_FILE = "Cacheing Tests/Cacheing Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		74BEC295165EE4FD0007763D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cacheing Tests/Cacheing Tests-Prefix.pch";
+				INFOPLIST_FILE = "Cacheing Tests/Cacheing Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -252,6 +391,16 @@
 				74BEC279165ED4120007763D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74BEC293165EE4FD0007763D /* Build configuration list for PBXNativeTarget "Cacheing Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74BEC294165EE4FD0007763D /* Debug */,
+				74BEC295165EE4FD0007763D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
