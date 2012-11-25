@@ -12,7 +12,9 @@
 
 + (NSBundle *)testsBundle
 {
-	return [NSBundle bundleForClass:self];
+	NSBundle *testBundle = [NSBundle bundleForClass:self];
+	NSURL *dummyBundleURL = [testBundle URLForResource:@"Dummy Bundle" withExtension:@"bundle"];
+	return [NSBundle bundleWithURL:dummyBundleURL];
 }
 
 + (NSString *)imageName
@@ -49,6 +51,16 @@
 	@autoreleasepool {
 		persistentlyCachedInstance = [[UIImage d12_imageNamed:[Cacheing_Tests imageName] inBundle:[Cacheing_Tests testsBundle]] retain];
 	}
+}
+
+- (void)testPurgeOnUnload
+{
+	UIImage *cachedImage = [[UIImage d12_imageNamed:[Cacheing_Tests imageName] inBundle:[Cacheing_Tests testsBundle]] retain];
+	[[Cacheing_Tests testsBundle] unload];
+	UIImage *refreshedImage = [[UIImage d12_imageNamed:[Cacheing_Tests imageName] inBundle:[Cacheing_Tests testsBundle]] retain];
+	STAssertFalse(cachedImage == refreshedImage, @"Images should be different, but aren’t");
+	[cachedImage release];
+	[refreshedImage release];
 }
 
 @end
