@@ -47,6 +47,7 @@
 		74BEC290165EE4FD0007763D /* Cacheing_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cacheing_Tests.m; sourceTree = "<group>"; };
 		74BEC292165EE4FD0007763D /* Cacheing Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cacheing Tests-Prefix.pch"; sourceTree = "<group>"; };
 		74BEC296165EE5B60007763D /* Font Book.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Font Book.tiff"; sourceTree = "<group>"; };
+		74ED3242166110E3002F3B2D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				74BEC270165ED4120007763D /* CachedImage-Prefix.pch */,
+				74ED3242166110E3002F3B2D /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
