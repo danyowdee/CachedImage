@@ -92,6 +92,7 @@
 		74BEC25E165ED4120007763D = {
 			isa = PBXGroup;
 			children = (
+				74ED3242166110E3002F3B2D /* README.md */,
 				74BEC26E165ED4120007763D /* CachedImage */,
 				74BEC289165EE4FD0007763D /* Cacheing Tests */,
 				74ED324A16629046002F3B2D /* Dummy Bundle */,
@@ -134,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				74BEC270165ED4120007763D /* CachedImage-Prefix.pch */,
-				74ED3242166110E3002F3B2D /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
