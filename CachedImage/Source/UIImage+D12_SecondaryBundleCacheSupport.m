@@ -62,13 +62,14 @@ static inline NSURL *sResolvedURLForImageNameInBundle(NSString *name, NSBundle *
 			// NSBundle posts a notification when a bundle is loaded, but not on unload.
 			// This stinks, because an unloaded bundle means we can purge the cache  associated with it.
 			// Therefore, we’ll instrument -[NSBundle unload] such, that it posts a notification if it unloads its contents, and then observe that.
-			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveBundleUnloadNotification:) name:s_bundleDidUnloadNotificationName object:nil];
+			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveUnloadNotification:) name:s_bundleDidUnloadNotificationName object:nil];
 			SEL unload = @selector(unload);
 			Class bundle = [NSBundle class];
 			IMP originalUnload = class_getMethodImplementation(bundle, unload);
 			assert(originalUnload);
-			IMP replacementForUnload = imp_implementationWithBlock(^(id self, SEL _cmd){
-				BOOL didUnload = ((BOOL(*)(id, SEL))originalUnload)(self, _cmd);
+			// Most interestingly, block-based implementations omit the _cmd argument that usually follows `self`.
+			IMP replacementForUnload = imp_implementationWithBlock(^(id self){
+				BOOL didUnload = ((BOOL(*)(id, SEL))originalUnload)(self, unload);
 				if (didUnload)
 					[[NSNotificationCenter defaultCenter] postNotificationName:s_bundleDidUnloadNotificationName object:self];
 
