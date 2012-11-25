@@ -14,10 +14,22 @@
 		74BEC288165EE4FD0007763D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BEC26C165ED4120007763D /* Foundation.framework */; };
 		74BEC28E165EE4FD0007763D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BEC28C165EE4FD0007763D /* InfoPlist.strings */; };
 		74BEC291165EE4FD0007763D /* Cacheing_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BEC290165EE4FD0007763D /* Cacheing_Tests.m */; };
-		74BEC297165EE5B60007763D /* Font Book.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 74BEC296165EE5B60007763D /* Font Book.tiff */; };
 		74BEC298165EE9B40007763D /* UIImage+D12_SecondaryBundleCacheSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BEC27C165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.m */; };
 		74ED324016611045002F3B2D /* UIImage+D12_SecondaryBundleCacheSupport.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74BEC27B165ED4840007763D /* UIImage+D12_SecondaryBundleCacheSupport.h */; };
+		74ED324F16629046002F3B2D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74ED324D16629046002F3B2D /* InfoPlist.strings */; };
+		74ED325416629067002F3B2D /* Font Book.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 74BEC296165EE5B60007763D /* Font Book.tiff */; };
+		74ED32571662911D002F3B2D /* Dummy Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74ED324716629046002F3B2D /* Dummy Bundle.bundle */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74ED3255166290F8002F3B2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74BEC260165ED4120007763D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74ED324616629046002F3B2D;
+			remoteInfo = "Dummy Bundle";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		74BEC267165ED4120007763D /* CopyFiles */ = {
@@ -48,6 +60,11 @@
 		74BEC292165EE4FD0007763D /* Cacheing Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cacheing Tests-Prefix.pch"; sourceTree = "<group>"; };
 		74BEC296165EE5B60007763D /* Font Book.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Font Book.tiff"; sourceTree = "<group>"; };
 		74ED3242166110E3002F3B2D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		74ED324716629046002F3B2D /* Dummy Bundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dummy Bundle.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74ED324816629046002F3B2D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		74ED324C16629046002F3B2D /* Dummy Bundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dummy Bundle-Info.plist"; sourceTree = "<group>"; };
+		74ED324E16629046002F3B2D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74ED325016629046002F3B2D /* Dummy Bundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dummy Bundle-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +94,7 @@
 			children = (
 				74BEC26E165ED4120007763D /* CachedImage */,
 				74BEC289165EE4FD0007763D /* Cacheing Tests */,
+				74ED324A16629046002F3B2D /* Dummy Bundle */,
 				74BEC26B165ED4120007763D /* Frameworks */,
 				74BEC26A165ED4120007763D /* Products */,
 			);
@@ -87,6 +105,7 @@
 			children = (
 				74BEC269165ED4120007763D /* libCachedImage.a */,
 				74BEC283165EE4FD0007763D /* Cacheing Tests.octest */,
+				74ED324716629046002F3B2D /* Dummy Bundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +116,7 @@
 				74BEC26C165ED4120007763D /* Foundation.framework */,
 				74BEC284165EE4FD0007763D /* SenTestingKit.framework */,
 				74BEC286165EE4FD0007763D /* UIKit.framework */,
+				74ED324816629046002F3B2D /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,6 +169,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		74ED324A16629046002F3B2D /* Dummy Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				74ED324B16629046002F3B2D /* Supporting Files */,
+			);
+			path = "Dummy Bundle";
+			sourceTree = "<group>";
+		};
+		74ED324B16629046002F3B2D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74ED324C16629046002F3B2D /* Dummy Bundle-Info.plist */,
+				74ED324D16629046002F3B2D /* InfoPlist.strings */,
+				74ED325016629046002F3B2D /* Dummy Bundle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,10 +219,26 @@
 			buildRules = (
 			);
 			dependencies = (
+				74ED3256166290F8002F3B2D /* PBXTargetDependency */,
 			);
 			name = "Cacheing Tests";
 			productName = "Cacheing Tests";
 			productReference = 74BEC283165EE4FD0007763D /* Cacheing Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		74ED324616629046002F3B2D /* Dummy Bundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74ED325116629046002F3B2D /* Build configuration list for PBXNativeTarget "Dummy Bundle" */;
+			buildPhases = (
+				74ED324516629046002F3B2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dummy Bundle";
+			productName = "Dummy Bundle";
+			productReference = 74ED324716629046002F3B2D /* Dummy Bundle.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -211,6 +265,7 @@
 			targets = (
 				74BEC268165ED4120007763D /* CachedImage */,
 				74BEC282165EE4FD0007763D /* Cacheing Tests */,
+				74ED324616629046002F3B2D /* Dummy Bundle */,
 			);
 		};
 /* End PBXProject section */
@@ -221,7 +276,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				74BEC28E165EE4FD0007763D /* InfoPlist.strings in Resources */,
-				74BEC297165EE5B60007763D /* Font Book.tiff in Resources */,
+				74ED32571662911D002F3B2D /* Dummy Bundle.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74ED324516629046002F3B2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74ED325416629067002F3B2D /* Font Book.tiff in Resources */,
+				74ED324F16629046002F3B2D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,11 +327,27 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		74ED3256166290F8002F3B2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74ED324616629046002F3B2D /* Dummy Bundle */;
+			targetProxy = 74ED3255166290F8002F3B2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		74BEC28C165EE4FD0007763D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				74BEC28D165EE4FD0007763D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74ED324D16629046002F3B2D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74ED324E16629046002F3B2D /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -374,6 +454,43 @@
 			};
 			name = Release;
 		};
+		74ED325216629046002F3B2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dummy Bundle/Dummy Bundle-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Dummy Bundle/Dummy Bundle-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		74ED325316629046002F3B2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dummy Bundle/Dummy Bundle-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Dummy Bundle/Dummy Bundle-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -403,6 +520,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		74ED325116629046002F3B2D /* Build configuration list for PBXNativeTarget "Dummy Bundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74ED325216629046002F3B2D /* Debug */,
+				74ED325316629046002F3B2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
