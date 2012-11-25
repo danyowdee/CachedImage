@@ -16,6 +16,8 @@
 
 #import "UIImage+D12_SecondaryBundleCacheSupport.h"
 
+#import <objc/runtime.h>
+
 static BOOL s_shouldPreferRetinaGraphics;
 static NSString *s_bundleDidUnloadNotificationName = @"D12: Bundle Did Unload!";
 static NSMutableDictionary *s_cachesByBundleIdentifier;
@@ -45,7 +47,6 @@ static inline NSURL *sResolvedURLForImageNameInBundle(NSString *name, NSBundle *
 
 @implementation UIImage (D12_SecondaryBundleCacheSupport)
 
-#import <objc/runtime.h>
 + (void)load
 {
 	static dispatch_once_t onceToken;
@@ -62,7 +63,7 @@ static inline NSURL *sResolvedURLForImageNameInBundle(NSString *name, NSBundle *
 			// NSBundle posts a notification when a bundle is loaded, but not on unload.
 			// This stinks, because an unloaded bundle means we can purge the cache  associated with it.
 			// Therefore, we’ll instrument -[NSBundle unload] such, that it posts a notification if it unloads its contents, and then observe that.
-			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveUnloadNotification:) name:s_bundleDidUnloadNotificationName object:nil];
+			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(d12_didReceiveUnloadNotification:) name:s_bundleDidUnloadNotificationName object:nil];
 			SEL unload = @selector(unload);
 			Class bundle = [NSBundle class];
 			IMP originalUnload = class_getMethodImplementation(bundle, unload);
@@ -114,7 +115,7 @@ static inline NSURL *sResolvedURLForImageNameInBundle(NSString *name, NSBundle *
 	return image;
 }
 
-+ (void)didReceiveUnloadNotification:(NSNotification *)notification
++ (void)d12_didReceiveUnloadNotification:(NSNotification *)notification
 {
 	NSString *bundleID = [[notification object] bundleIdentifier];
 	dispatch_async(s_imageCacheMutationQueue, ^{
